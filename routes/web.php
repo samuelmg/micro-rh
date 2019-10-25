@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('entradas-salidas/importar', 'ArchivoController@formulario')->name('importar-form');
+Route::post('entradas-salidas/importar', 'ArchivoController@cargar')->name('importar-post');
